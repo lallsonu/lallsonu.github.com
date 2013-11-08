@@ -19,7 +19,17 @@ background-size: cover;
 
 #homeimg
 {
-	height: 290px;
-	width: 222px;
+	height: 400px;
+	width: 400px;
 	float: right;
+}
+
+#metitle
+{
+	margin-top: 30px;
+}
+
+#aboutme
+{
+	margin-top: 30px;
 }
