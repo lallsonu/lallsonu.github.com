@@ -39,3 +39,9 @@ background-size: cover;
 {
 	color: #428bca;
 }
+
+#homepagecontent
+{
+	background-color: #000000;
+	opacity: 0.9;
+}
