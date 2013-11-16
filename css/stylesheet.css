@@ -59,16 +59,16 @@ background-size: cover;
 	margin-top: 40px;
 }
 
-#resumeSkills{
+/*#resumeSkills{
 	width: 100%;
 	height: 100%;
-	/*position:absolute;
+	position:absolute;
 	top:50px;
-	left:60px;*/
+	left:60px;
 	overflow-y: auto;
 	overflow-x: hidden;
-	/*white-space:nowrap;*/
-}
+	/*white-space:nowrap;
+}*/*/
 
 .spec{
 	width: 400px;
