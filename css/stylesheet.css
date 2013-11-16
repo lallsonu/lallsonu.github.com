@@ -70,8 +70,8 @@ src: url(HelveticaNeue.ttf);
 }
 
 .specL{
-	margin-left: 20px;
-	min-width: 280px;
+	margin-left: 20px;	
+	width:100%; 
 }
 
 #specTitle
