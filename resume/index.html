@@ -2,16 +2,7 @@
 layout: layout
 title: "Resume"
 ---
- <script src="http://code.jquery.com/jquery-1.9.1.min.js"></script>
-
- <script src="/js/jquery.raty.js"></script>
-
-<section class="content">
-  <div id="homepagecontent">
-  <h1 class="big thin" id="metitle">Resume</h1>
-
-<script type="text/javascript">
-var t = {};
+<!-- var t = {};
 	//web skills
 	t["Web"] = -1;
 	t["JavaScript/AJAX"] = 5.0;
@@ -33,7 +24,7 @@ var t = {};
 	t["Linux"]=3.5;
 	t["FPGA"]=3.5;
 
-		var index =0;
+	var index =0;
 		 	var counter=0;
 		 	var ranCount=0;
 		 	var y = 20;
@@ -50,7 +41,7 @@ var t = {};
 				  	}
 			  		var leftPos= (5+(350*index));
 			  	
-			    	 $('#homepagecontent').append("<div class='spec' style='position:absolute;left:"+leftPos+"px; top:"+y+"px; font-size:36px;'>"+key+"</div>");
+			    	 $('#resumeSkills').append("<div class='spec' style='position:absolute;left:"+leftPos+"px; top:"+y+"px; font-size:36px;'>"+key+"</div>");
 			    	 if (counter%2!=0)
 			  		{
 			  			index++;
@@ -60,7 +51,34 @@ var t = {};
 			    	 // alert(index);
 			  	}else{
 			  		y=y+30;
-			    	 $('#homepagecontent').append("<div class='spec' style='position:absolute;left:"+thisX+"px;top:"+y+"px;margin-top:15px;'>"+key+"<div id='rating_"+ranCount+"' style='display:inline;position:absolute;right:70px;width:250px;height:25px;opacity:0.85;'></div></div> ");
+			    	 $('#resumeSkillsvar index =0;
+		 	var counter=0;
+		 	var ranCount=0;
+		 	var y = 20;
+		 	var thisX=0;
+  			for (var key in t) {
+			  if (t.hasOwnProperty(key)) {
+			  	if(t[key]==-1)
+			  	{
+				 	if (counter%2!=0)
+				  	{
+				  		y=215;
+				  	}else{
+				  		y=20;
+				  	}
+			  		var leftPos= (5+(350*index));
+			  	
+			    	 $('#techExp').append("<div class='spec' style='position:absolute;left:"+leftPos+"px; top:"+y+"px; font-size:36px;'>"+key+"</div>");
+			    	 if (counter%2!=0)
+			  		{
+			  			index++;
+			  		}
+			  		thisX=leftPos;
+			  		counter++;
+			    	 // alert(index);
+			  	}else{
+			  		y=y+30;
+			    	 $('#techExp').append("<div class='spec' style='position:absolute;left:"+thisX+"px;top:"+y+"px;margin-top:15px;'>"+key+"<div id='rating_"+ranCount+"' style='display:inline;position:absolute;right:70px;width:250px;height:25px;opacity:0.85;'></div></div> ");
 			  		 var uniqueId="#rating_"+ranCount;
 			  		 $(uniqueId).raty({ 
 			  		 	score: t[key],
@@ -70,8 +88,42 @@ var t = {};
 			  		ranCount++;
 			  	}
 			  }
-			}
+			}').append("<div class='spec' style='position:absolute;left:"+thisX+"px;top:"+y+"px;margin-top:15px;'>"+key+"<div id='rating_"+ranCount+"' style='display:inline;position:absolute;right:70px;width:250px;height:25px;opacity:0.85;'></div></div> ");
+			  		 var uniqueId="#rating_"+ranCount;
+			  		 $(uniqueId).raty({ 
+			  		 	score: t[key],
+			  		 	readOnly  : true,
+			  		 	number: 6
+			  		});
+			  		ranCount++;
+			  	}
+			  }
+			} -->
+<section class="content">
+  <div id="homepagecontent">
+  <h1 class="big thin" id="metitle">Resume</h1>
+  <!-- Columns start at 50% wide on mobile and bump up to 33.3% wide on desktop -->
+<div class="row">
+  <div class="col-xs-6 col-md-4">.col-xs-6 .col-md-4</div>
+  <div class="col-xs-6 col-md-4">.col-xs-6 .col-md-4</div>
+  <div class="col-xs-6 col-md-4">.col-xs-6 .col-md-4</div>
+</div>
+<!-- Columns start at 50% wide on mobile and bump up to 33.3% wide on desktop -->
+<div class="row">
+  <div class="col-xs-6 col-md-4">.col-xs-6 .col-md-4</div>
+  <div class="col-xs-6 col-md-4">.col-xs-6 .col-md-4</div>
+  <div class="col-xs-6 col-md-4">.col-xs-6 .col-md-4</div>
+</div>
 
-</script>
+<!-- Columns start at 50% wide on mobile and bump up to 33.3% wide on desktop -->
+<div class="row">
+  <div class="col-xs-6 col-md-4">.col-xs-6 .col-md-4</div>
+  <div class="col-xs-6 col-md-4">.col-xs-6 .col-md-4</div>
+  <div class="col-xs-6 col-md-4">.col-xs-6 .col-md-4</div>
+</div>
+
+
+
+
 </div>
 </section>
