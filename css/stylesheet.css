@@ -12,6 +12,11 @@ background: url(/images/bg.png) no-repeat center center fixed;
 background-size: cover;
 }
 
+@font-face
+{
+font-family: Helvetica;
+src: url(HelveticaNeue.ttf);
+}
 
 #offWhiteBg{
 	width: 1000px;
@@ -60,7 +65,7 @@ background-size: cover;
 	margin-top: 40px;
 }
 
-#spec{
+.spec{
 	margin-left: 10px;
-	font-size: 34px;
+	font: 34px/1 Helvetica;
 }
