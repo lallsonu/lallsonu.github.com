@@ -12,6 +12,12 @@ background: url(/images/bg.png) no-repeat center center fixed;
 background-size: cover;
 }
 
+@font-face
+{
+font-family: Helvetica;
+src: url(HelveticaNeue.ttf);
+}
+
 #offWhiteBg{
 	width: 1000px;
 	height:550px;
@@ -74,4 +80,5 @@ background-size: cover;
 	width: 400px;
 	height: 25px;
 	margin-bottom: 10px;
+	font: 34px/1 Helvetica;
 }
