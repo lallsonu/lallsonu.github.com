@@ -67,5 +67,9 @@ src: url(HelveticaNeue.ttf);
 
 .spec{
 	margin-left: 10px;
+}
+
+#specTitle
+{
 	font: 34px/1 Helvetica;
 }
