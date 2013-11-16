@@ -79,6 +79,6 @@ src: url(HelveticaNeue.ttf);
 .spec{
 	width: 400px;
 	height: 25px;
-	margin-bottom: 10px;
+	margin-left: 10px;
 	font: 34px/1 Helvetica;
 }
