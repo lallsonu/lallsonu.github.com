@@ -50,7 +50,7 @@ var t = {};
 				  	}
 			  		var leftPos= (5+(350*index));
 			  	
-			    	 $('#resumeSkills').append("<div class='spec' style='position:absolute;left:"+leftPos+"px; top:"+y+"px; font-size:36px;'>"+key+"</div>");
+			    	 $('#homepagecontent').append("<div class='spec' style='position:absolute;left:"+leftPos+"px; top:"+y+"px; font-size:36px;'>"+key+"</div>");
 			    	 if (counter%2!=0)
 			  		{
 			  			index++;
@@ -60,7 +60,7 @@ var t = {};
 			    	 // alert(index);
 			  	}else{
 			  		y=y+30;
-			    	 $('#resumeSkills').append("<div class='spec' style='position:absolute;left:"+thisX+"px;top:"+y+"px;margin-top:15px;'>"+key+"<div id='rating_"+ranCount+"' style='display:inline;position:absolute;right:70px;width:250px;height:25px;opacity:0.85;'></div></div> ");
+			    	 $('#homepagecontent').append("<div class='spec' style='position:absolute;left:"+thisX+"px;top:"+y+"px;margin-top:15px;'>"+key+"<div id='rating_"+ranCount+"' style='display:inline;position:absolute;right:70px;width:250px;height:25px;opacity:0.85;'></div></div> ");
 			  		 var uniqueId="#rating_"+ranCount;
 			  		 $(uniqueId).raty({ 
 			  		 	score: t[key],
