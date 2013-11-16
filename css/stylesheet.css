@@ -70,7 +70,8 @@ src: url(HelveticaNeue.ttf);
 }
 
 .specL{
-	margin-left: 10px;	
+	margin-left: 10px;
+	margin-bottom: -25px;	
 	width:100%; 
 }
 
