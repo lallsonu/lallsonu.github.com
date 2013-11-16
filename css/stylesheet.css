@@ -65,8 +65,14 @@ src: url(HelveticaNeue.ttf);
 	margin-top: 40px;
 }
 
-.spec{
+.specB{
 	margin-left: 10px;
+}
+
+.specL{
+	margin-left: 20px;
+	min-width: 280px;
+	font: 17px/1 Helvetica;
 }
 
 #specTitle
