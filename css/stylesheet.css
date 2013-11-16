@@ -71,9 +71,7 @@ background-size: cover;
 	/*white-space:nowrap;
 }*/*/
 
-.spec{
-	width: 400px;
-	height: 25px;
+#spec{
 	margin-left: 10px;
 	font-size: 34px;
 }
