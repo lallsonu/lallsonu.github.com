@@ -74,6 +74,13 @@ src: url(HelveticaNeue.ttf);
 	width:100%; 
 }
 
+.circleRatings
+{
+	display:inline;
+	opacity:0.85;
+	margin-left:30px;
+}
+
 #specTitle
 {
 	font: 34px/1 Helvetica;
