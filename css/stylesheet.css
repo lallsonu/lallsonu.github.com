@@ -78,8 +78,8 @@ src: url(HelveticaNeue.ttf);
 {
 	display:inline;
 	opacity:0.85;
-	margin-left:30px;
-	float: right;
+	width: 50%; 
+	margin: 0 auto;
 }
 
 #specTitle
