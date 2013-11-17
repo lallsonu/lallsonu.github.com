@@ -71,7 +71,7 @@ src: url(HelveticaNeue.ttf);
 
 .specL{
 	margin-left: 10px;
-	margin-bottom: -25px;	
+	/*margin-bottom: -25px;	*/
 	width:50%; 
 }
 
@@ -80,7 +80,7 @@ src: url(HelveticaNeue.ttf);
 	display:inline;
 	opacity:0.85;
 	float: right;
-	margin-bottom: -25px;	
+	/*margin-bottom: -25px;	*/
 
 }
 
