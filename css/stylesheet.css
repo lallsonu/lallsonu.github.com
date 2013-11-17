@@ -96,3 +96,8 @@ src: url(HelveticaNeue.ttf);
 {
 	width: 100%;
 }
+
+#specRow
+{
+	height: 30px;
+}
