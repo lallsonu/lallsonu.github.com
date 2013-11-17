@@ -77,9 +77,10 @@ src: url(HelveticaNeue.ttf);
 
 .circleRatings
 {
-	display:inline;
-	opacity:0.85;
-	margin-left: 50px;
+	/*display:inline;
+	*/opacity:0.85;
+	float: right;
+	right: 2px;
 }
 
 #specTitle
