@@ -80,8 +80,8 @@ src: url(HelveticaNeue.ttf);
 	display:inline;
 	opacity:0.85;
 	float: right;
-	position: relative;
-	right:20px;
+	width: 50%;
+	height: 100%;
 	/*margin-bottom: -25px;	*/
 
 }
