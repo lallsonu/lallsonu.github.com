@@ -80,7 +80,8 @@ src: url(HelveticaNeue.ttf);
 	display:inline;
 	opacity:0.85;
 	float: right;
-	right: 2px;
+	margin-bottom: -25px;	
+
 }
 
 #specTitle
