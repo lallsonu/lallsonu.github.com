@@ -467,7 +467,7 @@
     targetKeep    : false,
     targetText    : '',
     targetType    : 'hint',
-    width         : 280
+    width         : 150
   };
 
 })(jQuery);
