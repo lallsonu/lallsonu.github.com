@@ -79,6 +79,7 @@ src: url(HelveticaNeue.ttf);
 {
 	display:inline;
 	opacity:0.85;
+	margin-left: 50px;
 }
 
 #specTitle
