@@ -88,3 +88,8 @@ src: url(HelveticaNeue.ttf);
 {
 	font: 34px/1 Helvetica;
 }
+
+.specWrapper
+{
+	width: 100%;
+}
