@@ -77,7 +77,7 @@ src: url(HelveticaNeue.ttf);
 
 .circleRatings
 {
-	/*display:inline;*/
+	display:inline;
 	opacity:0.85;
 	float: right;
 	right: 2px;
