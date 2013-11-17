@@ -72,14 +72,14 @@ src: url(HelveticaNeue.ttf);
 .specL{
 	margin-left: 10px;
 	margin-bottom: -25px;	
-	width:100%; 
+	width:50%; 
 }
 
 .circleRatings
 {
-	/*display:inline;
-	*/opacity:0.85;
-	float: right;
+	display:inline;
+	opacity:0.85;
+	/*float: right;*/
 	width: 50%;
 	right: 2px;
 }
