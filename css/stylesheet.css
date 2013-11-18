@@ -73,6 +73,8 @@ src: url(HelveticaNeue.ttf);
 
 .specL{
 	margin-left: 30px;
+	font: 16px/1 Helvetica;
+
 	/*margin-bottom: -25px;	*/
 	width:50%; 
 }
@@ -119,6 +121,8 @@ src: url(HelveticaNeue.ttf);
 	width: 900px;
 	height: 230px;
 	color: #5B76A5;
+	margin-left: 15px;
+
 
 }
 
@@ -136,8 +140,9 @@ src: url(HelveticaNeue.ttf);
 	color: #575757;
 	width:900px;
 	height: 500px;
-	position: relative;
-	left: 25px;
+	margin-left: 15px;
+	font: 16px/1 Helvetica;
+
 }
 
 #projects
