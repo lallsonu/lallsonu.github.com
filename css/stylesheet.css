@@ -64,6 +64,7 @@ src: url(HelveticaNeue.ttf);
 	height: 525px;
 	margin-top: 40px;
 	overflow-y:auto;
+	overflow-x:none;
 }
 
 .specB{
