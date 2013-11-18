@@ -106,7 +106,7 @@ src: url(HelveticaNeue.ttf);
 }
 
 #jobHead{
-	font-size:30px;
+	font: 30px/1 Helvetica;
 	position:relative;
 	color: #5B76A5;
 	top:10px;
@@ -114,7 +114,7 @@ src: url(HelveticaNeue.ttf);
 }
 
 #jobSubHead{
-	font-size:22px;
+	font: 22px/1 Helvetica;
 	margin-top:10px;
 	width: 900px;
 	height: 230px;
@@ -133,7 +133,6 @@ src: url(HelveticaNeue.ttf);
 }
 
 #description{
-	font-size:19px;
 	color: #575757;
 	width:900px;
 	height: 500px;
