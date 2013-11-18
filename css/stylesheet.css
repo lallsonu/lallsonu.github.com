@@ -142,3 +142,8 @@ src: url(HelveticaNeue.ttf);
 	position: relative;
 	left: 25px;
 }
+
+#projects
+{
+	width: 100%;
+}
