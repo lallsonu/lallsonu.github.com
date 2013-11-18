@@ -119,7 +119,7 @@ src: url(HelveticaNeue.ttf);
 	font: 22px/1 Helvetica;
 	margin-top:10px;
 	width: 100%;
-	height: 190px;
+	height: auto;
 	color: #5B76A5;
 	margin-left: 15px;
 
@@ -139,7 +139,7 @@ src: url(HelveticaNeue.ttf);
 #description{
 	color: #575757;
 	width:100%;
-	height: 300px;
+	height: auto;
 	margin-left: 15px;
 	font: 17px/1 Helvetica;
 
