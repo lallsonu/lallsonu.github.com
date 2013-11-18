@@ -106,14 +106,14 @@ src: url(HelveticaNeue.ttf);
 }
 
 #jobHead{
-	font-size:36px;
+	font-size:30px;
 	position:relative;
 	color: #5B76A5;
 	top:10px;
 }
 
 #jobSubHead{
-	font-size:24px;
+	font-size:22px;
 	position:relative;
 	top:10px;
 	width: 900px;
@@ -123,7 +123,6 @@ src: url(HelveticaNeue.ttf);
 }
 
 #jobDate{
-	font-size: 18px;
 	position:relative;
 	top:3px;
 	color: #5B76A5;
