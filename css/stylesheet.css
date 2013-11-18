@@ -131,6 +131,7 @@ src: url(HelveticaNeue.ttf);
 	width:100%;
 	height: auto;
 	margin-left: 15px;
+	margin-bottom: 15px;
 	font: 17px/1 Helvetica;
 }
 
