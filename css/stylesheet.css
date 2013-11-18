@@ -112,7 +112,7 @@ src: url(HelveticaNeue.ttf);
 	position:relative;
 	color: #5B76A5;
 	top:10px;
-	margin-left: 30px;
+	margin-left: 15px;
 }
 
 #jobSubHead{
@@ -139,7 +139,7 @@ src: url(HelveticaNeue.ttf);
 #description{
 	color: #575757;
 	width:900px;
-	height: 500px;
+	height: 300px;
 	margin-left: 15px;
 	font: 17px/1 Helvetica;
 
