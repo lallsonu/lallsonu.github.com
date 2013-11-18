@@ -66,7 +66,6 @@ src: url(HelveticaNeue.ttf);
 	overflow-y:auto;
 	overflow-x:hidden;
 	word-wrap: break-word;
-
 }
 
 .specB{
@@ -76,8 +75,6 @@ src: url(HelveticaNeue.ttf);
 .specL{
 	margin-left: 30px;
 	font: 16px/1 Helvetica;
-
-	/*margin-bottom: -25px;	*/
 	width:50%; 
 }
 
@@ -90,8 +87,6 @@ src: url(HelveticaNeue.ttf);
 	position: relative;
 	bottom: 40px;
 	margin-right: 20px;
-	/*margin-bottom: -25px;	*/
-
 }
 
 #specTitle
@@ -122,18 +117,13 @@ src: url(HelveticaNeue.ttf);
 	height: auto;
 	color: #5B76A5;
 	margin-left: 15px;
-
-
 }
 
 #jobDate{
 	color: #5B76A5;
-
-	/*bottom:10px;*/
 }
 
 .descPoint{
-    /*list-style-type: none;*/
 }
 
 #description{
@@ -142,16 +132,18 @@ src: url(HelveticaNeue.ttf);
 	height: auto;
 	margin-left: 15px;
 	font: 17px/1 Helvetica;
-
 }
 
 #projTitle
 {
 	font: 34px/1 Helvetica;
 	margin-left: 15px;
-
 }
 #projects
 {
 	width: 100%;
 }
+
+#emph{
+	color: #5B76A5;
+}s
