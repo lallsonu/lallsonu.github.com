@@ -2,103 +2,6 @@
 layout: layout
 title: "Resume"
 ---
-<!-- var t = {};
-	//web skills
-	t["Web"] = -1;
-	t["JavaScript/AJAX"] = 5.0;
-	t["MySQL/PHP/Perl"] = 4.5;
-	t["HTML/CSS"] = 5.;
-	t["ASP.Net/C#/Ruby"]=4.5;
-	t["OOP"]=-1;
-	t["XCode/Objective C"]=5.75;
-	t["C++/JAVA"]=5.0;
-	t["Creative"]= -1;
-	t["Adobe Photoshop"]=5.75;
-	t["Illustrator/InDesign"]=5.0;
-	t["CAD"]=-1;
-	t["AutoCAD"]=3.6;
-	t["SolidWorks"]=3.5;
-	t["OS"]= -1;
-	t["Windows"]= 5.9;
-	t["MacOSX"]=4.5;
-	t["Linux"]=3.5;
-	t["FPGA"]=3.5;
-
-	var index =0;
-		 	var counter=0;
-		 	var ranCount=0;
-		 	var y = 20;
-		 	var thisX=0;
-  			for (var key in t) {
-			  if (t.hasOwnProperty(key)) {
-			  	if(t[key]==-1)
-			  	{
-				 	if (counter%2!=0)
-				  	{
-				  		y=215;
-				  	}else{
-				  		y=20;
-				  	}
-			  		var leftPos= (5+(350*index));
-			  	
-			    	 $('#resumeSkills').append("<div class='spec' style='position:absolute;left:"+leftPos+"px; top:"+y+"px; font-size:36px;'>"+key+"</div>");
-			    	 if (counter%2!=0)
-			  		{
-			  			index++;
-			  		}
-			  		thisX=leftPos;
-			  		counter++;
-			    	 // alert(index);
-			  	}else{
-			  		y=y+30;
-			    	 $('#resumeSkillsvar index =0;
-		 	var counter=0;
-		 	var ranCount=0;
-		 	var y = 20;
-		 	var thisX=0;
-  			for (var key in t) {
-			  if (t.hasOwnProperty(key)) {
-			  	if(t[key]==-1)
-			  	{
-				 	if (counter%2!=0)
-				  	{
-				  		y=215;
-				  	}else{
-				  		y=20;
-				  	}
-			  		var leftPos= (5+(350*index));
-			  	
-			    	 $('#techExp').append("<div class='spec' style='position:absolute;left:"+leftPos+"px; top:"+y+"px; font-size:36px;'>"+key+"</div>");
-			    	 if (counter%2!=0)
-			  		{
-			  			index++;
-			  		}
-			  		thisX=leftPos;
-			  		counter++;
-			    	 // alert(index);
-			  	}else{
-			  		y=y+30;
-			    	 $('#techExp').append("<div class='spec' style='position:absolute;left:"+thisX+"px;top:"+y+"px;margin-top:15px;'>"+key+"<div id='rating_"+ranCount+"' style='display:inline;position:absolute;right:70px;width:250px;height:25px;opacity:0.85;'></div></div> ");
-			  		 var uniqueId="#rating_"+ranCount;
-			  		 $(uniqueId).raty({ 
-			  		 	score: t[key],
-			  		 	readOnly  : true,
-			  		 	number: 6
-			  		});
-			  		ranCount++;
-			  	}
-			  }
-			}').append("<div class='spec' style='position:absolute;left:"+thisX+"px;top:"+y+"px;margin-top:15px;'>"+key+"<div id='rating_"+ranCount+"' style='display:inline;position:absolute;right:70px;width:250px;height:25px;opacity:0.85;'></div></div> ");
-			  		 var uniqueId="#rating_"+ranCount;
-			  		 $(uniqueId).raty({ 
-			  		 	score: t[key],
-			  		 	readOnly  : true,
-			  		 	number: 6
-			  		});
-			  		ranCount++;
-			  	}
-			  }
-			} -->
 
 <script src="http://code.jquery.com/jquery-latest.min.js"></script>
 <script src="/js/jquery.raty.js"></script>
@@ -320,6 +223,23 @@ title: "Resume"
 		 	
 		</div>
 
+		 <div class="col-md-10">
+ 	<div id="jobHead">Engineering Design Project (3rd year) - Microbat Sonar Systems</div>
+		 	<div id="jobSubHead">Product Manager and Developer <div id="jobDate">April 2013-Sept. 2013</div></div>
+		 	<div id="description">
+			 	<ul>
+			 		<li class="descPoint">Explored the uses of sonar technology in biometric devices; researched haptic feedback techniques and their User Experience implications</li>
+			 		<li class="descPoint">Created an innovative product that used sonar technology to detect distance to objects for the visually impaired</li>
+			 		<li class="descPoint">Used an Arduino microcontroller and C programming to translate data to variable haptic feedback</li>
+			 		<li class="descPoint">Employed powerful product management skills to lead development, CAD models and marketing video</li>
+			 		
+			 		<li class="descPoint">Featured in the innovation and technology section of the University of Waterloo Imprint Newspaper.</li>
+			 		<li class="descPoint"><a href="http://www.uwimprint.ca/article/3305-systems-design-symposium-stretches-the-imagination">Imprint Article</a></li>
+			 	</ul>
+		 	</div>
+		 	
+		</div>
+
  <div class="col-md-10">
 	<div id="jobHead">Lightitude Competition - Oara</div>
 		 	<div id="jobSubHead">Project Lead and Mechanical Designer<div id="jobDate">July 2012 - Sept 2012</div></div>
@@ -335,7 +255,7 @@ title: "Resume"
 </div>
 		 <div class="col-md-10">
 	<div id="jobHead">Mercatus Technologies - Price Chopper</div>
-		 	<div id="jobSubHead">Mobile Application Development<div id="jobDate">Sept 2011-Dec 2011 | May 2012-Sept 2012</div></div>
+		 	<div id="jobSubHead">Mobile Application Developer<div id="jobDate">Sept 2011-Dec 2011 | May 2012-Sept 2012</div></div>
 		 	<div id="description">
 			 	<ul>
 			 		<li class="descPoint">Worked with the Mobile Engineering team over two co-op terms to <span id="highlight">develop and support</span> various <span id="highlight">iPhone, iPad</span> and <span id="highlight">Android apps;</span></li>
@@ -346,6 +266,22 @@ title: "Resume"
 			 			Publicly available apps can be downloaded from Android and IOS App stores under ‘Price Chopper’.
 					Website can be viewed at <a href="http://www.pricechopper.com">http://www.pricechopper.com</a>
 			 		</li>
+			 	</ul>
+		 	</div>
+
+
+		</div>
+
+				 <div class="col-md-10">
+	<div id="jobHead">Ontario Institute of Cancer Research - Genome Software Project</div>
+		 	<div id="jobSubHead">Genome Software Developer<div id="jobDate">Jan 2011-Apr 2011</div></div>
+		 	<div id="description">
+			 	<ul>
+			 		<li class="descPoint">Used <span id="highlight">JavaScript</span> to patch existing website so that it can recognize and respond to touch gestures (iPad);</li>
+			 		<li class="descPoint"> <span id="highlight">Developed a system</span> which allows a user to select a favourite Gene and retain it in their session;</li>
+			 		<li class="descPoint">Studied and applied <span id="highlight">complex data structures</span> using hashes and arrays to create the most <span id="highlight">efficient system</span> to save genes and genome snapshot;</li>
+			 		<li class="descPoint"> System can be viewed at http://modencode.oicr.on.ca/fgb2/gbrowse/fly/</li>
+			 		
 			 	</ul>
 		 	</div>
 

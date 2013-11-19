@@ -106,7 +106,7 @@ src: url(HelveticaNeue.ttf);
 
 #jobHead{
 	font: 30px/1 Helvetica;
-	color: #5B76A5;
+	color: #575757;
 	margin-left: 15px;
 }
 
@@ -115,12 +115,12 @@ src: url(HelveticaNeue.ttf);
 	margin-top:10px;
 	width: 100%;
 	height: auto;
-	color: #5B76A5;
+	color: #575757;
 	margin-left: 15px;
 }
 
 #jobDate{
-	color: #5B76A5;
+	color: #575757;
 }
 
 .descPoint{
