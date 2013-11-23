@@ -86,7 +86,7 @@ src: url(HelveticaNeue.ttf);
 	height: 100%;
 	position: relative;
 	bottom: 40px;
-	right: 15px;
+	margin-right: 30px;
 }
 
 #specTitle
