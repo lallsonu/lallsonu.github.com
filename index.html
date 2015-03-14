@@ -9,8 +9,15 @@
   <body>
     <script src="js/three.min.js"></script>
     <script>
+      var scene = new THREE.Scene();
+      var camera = new THREE.PerspectiveCamera( 75, window.innerWidth/window.innerHeight, 0.1, 1000 );
+
+      var renderer = new THREE.WebGLRenderer();
+      renderer.setSize( window.innerWidth, window.innerHeight );
+      document.body.appendChild( renderer.domElement );
+
       var loader = new THREE.JSONLoader();
-var animation;
+  var animation;
 
 // load the model and create everything
 loader.load('js/hand.js', function (geometry, materials) {
@@ -55,6 +62,7 @@ function render() {
   renderer.render(scene, camera);
   requestAnimationFrame(render);
 }
+      render();
     </script>
   </body>
 </html>
