@@ -22,7 +22,7 @@ var loader = new THREE.JSONLoader();
 var animation;
 
 // load the model and create everything
-loader.load('js/hand.js', function (geometry, materials) {
+loader.load('js/hand.json', function (geometry, materials) {
   var mesh, material;
 
   // create a mesh
@@ -45,18 +45,18 @@ loader.load('js/hand.js', function (geometry, materials) {
       mesh.receiveShadow = true;
   scene.add(mesh);
 
-  // // add animation data to the animation handler
-  // THREE.AnimationHandler.add(mesh.geometry.animation);
+  // add animation data to the animation handler
+  THREE.AnimationHandler.add(mesh.geometry.animation);
 
-  // // create animation
-  // animation = new THREE.Animation(
-  //   mesh,
-  //   'ArmatureAction',
-  //   THREE.AnimationHandler.CATMULLROM
-  // );
+  // create animation
+  animation = new THREE.Animation(
+    mesh,
+    'ArmatureAction',
+    THREE.AnimationHandler.CATMULLROM
+  );
 
-  // // play the anim
-  // animation.play();
+  // play the anim
+  animation.play();
 
   render();
 });
@@ -64,7 +64,7 @@ loader.load('js/hand.js', function (geometry, materials) {
 function render() {
   //animation.update(.01);
   renderer.render(scene, camera);
-  // requestAnimationFrame(render);
+  requestAnimationFrame(render);
 }
       render();
     </script>
