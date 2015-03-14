@@ -9,30 +9,52 @@
   <body>
     <script src="js/three.min.js"></script>
     <script>
-      var scene = new THREE.Scene();
-      var camera = new THREE.PerspectiveCamera( 75, window.innerWidth/window.innerHeight, 0.1, 1000 );
+      var loader = new THREE.JSONLoader();
+var animation;
 
-      var renderer = new THREE.WebGLRenderer();
-      renderer.setSize( window.innerWidth, window.innerHeight );
-      document.body.appendChild( renderer.domElement );
+// load the model and create everything
+loader.load('hand.js', function (geometry, materials) {
+  var mesh, material;
 
-      var geometry = new THREE.BoxGeometry( 1, 1, 1 );
-      var material = new THREE.MeshBasicMaterial( { color: 0x00ff00 } );
-      var cube = new THREE.Mesh( geometry, material );
-      scene.add( cube );
+  // create a mesh
+  mesh = new THREE.SkinnedMesh(
+    geometry,
+    new THREE.MeshFaceMaterial(materials)
+  );
 
-      camera.position.z = 5;
+  // define materials collection
+  material = mesh.material.materials;
 
-      var render = function () {
-        requestAnimationFrame( render );
+  // enable skinning
+  for (var i = 0; i < materials.length; i++) {
+    var mat = materials[i];
 
-        cube.rotation.x += 0.1;
-        cube.rotation.y += 0.1;
+    mat.skinning = true;
+  }
 
-        renderer.render(scene, camera);
-      };
+  scene.add(mesh);
 
-      render();
+  // add animation data to the animation handler
+  THREE.AnimationHandler.add(mesh.geometry.animation);
+
+  // create animation
+  animation = new THREE.Animation(
+    mesh,
+    'ArmatureAction',
+    THREE.AnimationHandler.CATMULLROM
+  );
+
+  // play the anim
+  animation.play();
+
+  render();
+});
+
+function render() {
+  animation.update(.01);
+  renderer.render(scene, camera);
+  requestAnimationFrame(render);
+}
     </script>
   </body>
 </html>
