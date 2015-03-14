@@ -1,5 +1,4 @@
-var rigs = {};
-rigs.left = {
+ {
 
 	"metadata" :
 	{
