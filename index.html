@@ -41,20 +41,22 @@ loader.load('js/hand.js', function (geometry, materials) {
     mat.skinning = true;
   }
 
+ mesh.castShadow = true;
+      mesh.receiveShadow = true;
   scene.add(mesh);
 
-  // add animation data to the animation handler
-  THREE.AnimationHandler.add(mesh.geometry.animation);
+  // // add animation data to the animation handler
+  // THREE.AnimationHandler.add(mesh.geometry.animation);
 
-  // create animation
-  animation = new THREE.Animation(
-    mesh,
-    'ArmatureAction',
-    THREE.AnimationHandler.CATMULLROM
-  );
+  // // create animation
+  // animation = new THREE.Animation(
+  //   mesh,
+  //   'ArmatureAction',
+  //   THREE.AnimationHandler.CATMULLROM
+  // );
 
-  // play the anim
-  animation.play();
+  // // play the anim
+  // animation.play();
 
   render();
 });
@@ -62,7 +64,7 @@ loader.load('js/hand.js', function (geometry, materials) {
 function render() {
   //animation.update(.01);
   renderer.render(scene, camera);
-  requestAnimationFrame(render);
+  // requestAnimationFrame(render);
 }
       render();
     </script>
