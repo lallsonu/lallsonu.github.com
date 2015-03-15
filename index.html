@@ -1,77 +1,26 @@
-<html>
-  <head>
-    <title>My first Three.js app</title>
-    <style>
-      body { margin: 0; }
-      canvas { width: 100%; height: 100% }
-    </style>
-  </head>
-  <body>
-    <script src="js/three.min.js"></script>
-    <script>
-          window.onload = function() {
+<!DOCTYPE html>
+<html lang="en">
+	<head>
+		<meta charset="utf-8">
+		<title>Merged code from sources</title>
 
-      var scene = new THREE.Scene();
-      var camera = new THREE.PerspectiveCamera( 75, window.innerWidth/window.innerHeight, 0.1, 1000 );
+		<!-- CSS -->
+  	<link rel="stylesheet" href="css/main.css" type="text/css" media="screen" >
 
-      var renderer = new THREE.WebGLRenderer();
-      renderer.setSize( window.innerWidth, window.innerHeight );
-      document.body.appendChild( renderer.domElement );
+	</head>
 
-var scene = new THREE.Scene();
-      var camera = new THREE.PerspectiveCamera( 75, window.innerWidth/window.innerHeight, 0.1, 1000 );
+	<body>
+		<div class="originals"></div>
+		<div class="accelerometer"></div>
+		
+		<div class="kalman"></div>
+		<div class="debugger"></div>
 
-      var renderer = new THREE.WebGLRenderer();
-      renderer.setSize( window.innerWidth, window.innerHeight );
-      document.body.appendChild( renderer.domElement );
+		<div class="viewport-1"></div>
+		<div class="viewport-2"></div>
 
-      var loader = new THREE.JSONLoader();
-  var animation;
-
-// load the model and create everything
-loader.load('js/hand.js', function (geometry, materials) {
-  var mesh, material;
-
-  // create a mesh
-  mesh = new THREE.SkinnedMesh(
-    geometry,
-    new THREE.MeshFaceMaterial(materials)
-  );
-
-  // define materials collection
-  material = mesh.material.materials;
-
-  // enable skinning
-  for (var i = 0; i < materials.length; i++) {
-    var mat = materials[i];
-
-    mat.skinning = true;
-  }
-
-  scene.add(mesh);
-
-  // add animation data to the animation handler
-  THREE.AnimationHandler.add(mesh.geometry.animation);
-
-  // create animation
-  animation = new THREE.Animation(
-    mesh,
-    'ArmatureAction',
-    THREE.AnimationHandler.CATMULLROM
-  );
-
-  // play the anim
-  animation.play();
-
-  render();
-});
-
-function render() {
-  renderer.render(scene, camera);
-  requestAnimationFrame(render);
-}
-      render();
-    }
-    </script>
-  </body>
+		<script src="js/libs.js"></script>
+		<script src="js/build.js"></script>
+	
+	</body>			
 </html>
