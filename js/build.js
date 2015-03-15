@@ -1335,7 +1335,6 @@ render();
 
 
 // connect controller
-leap.connect();
 
 
 
