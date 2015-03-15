@@ -1277,10 +1277,10 @@ exports.animate = function(frame, handMesh, fingers){
 },{"./leapBox.js":8}],5:[function(require,module,exports){
 'use strict';
 
-var threeDStage = require('./threeDStage.js');
-var orientationController = require('./DeviceOrientationController.js');
-var hand = require('./hand.js');
-var animateHand = require('./animateHand.js');
+var threeDStage = require('threeDStage.js');
+var orientationController = require('DeviceOrientationController.js');
+var hand = require('hand.js');
+var animateHand = require('animateHand.js');
 require('es6-promise').polyfill();
 
 var handLoader = hand.createHand();  //returns loader async object
@@ -1361,7 +1361,7 @@ exports.createHand = function(){ //set id for fingers once and assign bones
 	var loader = new THREE.JSONLoader();
 
 	//load Hand model with ThreeJS Loader
-	loader.load('js/rigging.json', function (geometry, materials) {
+	loader.load('rigging.json', function (geometry, materials) {
 	  var material;
 
 	  hand = new THREE.SkinnedMesh(
