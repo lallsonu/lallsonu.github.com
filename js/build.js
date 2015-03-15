@@ -1578,7 +1578,7 @@ exports.createStage = function(viewport, view){
 	//camera
 	camera = new THREE.PerspectiveCamera(VIEW_ANGLE, ASPECT, NEAR, FAR);
 	camera.rotation.order = 'YZX';
-	camera.position.set(5, 5, 60); //was 60
+	camera.position.set(5, 5, 10); //was 60
 	camera.lookAt(scene.position);
 	scene.add(camera);
 
