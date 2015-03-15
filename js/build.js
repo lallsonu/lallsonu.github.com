@@ -1281,6 +1281,7 @@ exports.animate = function(frame, handMesh, fingers){
 var threeDStage = require('./threeDStage.js');
 var orientationController = require('./DeviceOrientationController.js');
 var hand = require('./hand.js');
+window.alert('foo');
 var animateHand = require('./animateHand.js');
 require('es6-promise').polyfill();
 
