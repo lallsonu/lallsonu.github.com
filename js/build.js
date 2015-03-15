@@ -1243,7 +1243,8 @@ exports.animate = function(frame, handMesh, fingers){
     //Setting palm position and rotation to position of hand mesh on screen
     var hand = frame.hands[0];
 
- 
+    var position = leapBox.leapToScene( frame , hand.palmPosition );//ensures hand appears within Leap Js interaction box
+    handMesh.position = position; // apply position
 
     var rotation = {
       z: hand.pitch(),
@@ -1277,23 +1278,23 @@ exports.animate = function(frame, handMesh, fingers){
 },{"./leapBox.js":8}],5:[function(require,module,exports){
 'use strict';
 
-var threeDStage = require('threeDStage.js');
-var orientationController = require('DeviceOrientationController.js');
-var hand = require('hand.js');
-var animateHand = require('animateHand.js');
+var threeDStage = require('./threeDStage.js');
+var orientationController = require('./DeviceOrientationController.js');
+var hand = require('./hand.js');
+var animateHand = require('./animateHand.js');
 require('es6-promise').polyfill();
 
 var handLoader = hand.createHand();  //returns loader async object
-var handRigLeft, handRigRight;
-var stageRight = threeDStage.createStage('.viewport-2', 'right');
+var handRigLeft;
+var stageLeft = threeDStage.createStage('.viewport-1', 'left');
 var ctrl = orientationController.DeviceOrientationController;
 
 //TODO ES6: Would destructuring help recuce the footprint of this 
 //method call and keep it in 80 chars 
+stageLeft.controls = new ctrl( stageLeft.camera, stageLeft.renderer.domElement );
+stageLeft.controls.connect();
 
 
-stageRight.controls = new ctrl( stageRight.camera, stageRight.renderer.domElement );
-stageRight.controls.connect();
 
 //create promise implementation here to call hand loader
 var loadHandRigging = new Promise(function(resolve){
@@ -1306,14 +1307,15 @@ var loadHandRigging = new Promise(function(resolve){
 loadHandRigging.then(function() {
 
   handRigLeft = hand.getHand();
-  handRigRight = hand.getHand();
 
+  stageLeft.scene.add(handRigLeft.handMesh);
 
   //Can't add mesh to both right and left hand of screen
   //stageRight.scene.add(handRigRight.handMesh);
 
 
-
+  //Init Leap loop, runs the animation of the ThreeD hand from the Leap input
+  
 }, function(err) {
   console.log(err); // Error: "It broke"
   console.log("hand rig not loaded in reject");
@@ -1322,10 +1324,10 @@ loadHandRigging.then(function() {
 
 // Render loop runs stage updating and view to cardboard
 function render() {
-	stageRight.controls.update();
+	stageLeft.controls.update();
 	//TODO ES6: Destructuring and aliasing in the parameters would
 	// clean up the render objects and make them more readable
-	stageRight.renderer.render( stageRight.scene, stageRight.camera );
+  stageLeft.renderer.render( stageLeft.scene, stageLeft.camera );
   
   requestAnimationFrame(render);
 }
@@ -1334,14 +1336,12 @@ render();
 
 
 
-// connect controller
 
 
 
 
 
-
-},{"DeviceOrientationController.js":3,"animateHand.js":4,"hand.js":6,"threeDStage.js":10,"es6-promise":2}],6:[function(require,module,exports){
+},{"./DeviceOrientationController.js":3,"./animateHand.js":4,"./hand.js":6,"./threeDStage.js":10,"es6-promise":2}],6:[function(require,module,exports){
 'use strict';
 
 	var fingers = [
@@ -1556,10 +1556,12 @@ exports.createStage = function(viewport, view){
 
 	WIDTH = window.innerWidth/2;
 	HEIGHT = window.innerHeight/2;
-	VIEW_ANGLE = 10;//was 10
+	VIEW_ANGLE = 45;//was 10
 	ASPECT = WIDTH / HEIGHT;
 	NEAR = 1;
 	FAR = 10000;
+
+	var viewAngle = (view === 'left') ? 1 : -1;
 
 	container = document.querySelector(viewport);
 
@@ -1577,7 +1579,7 @@ exports.createStage = function(viewport, view){
 	//camera
 	camera = new THREE.PerspectiveCamera(VIEW_ANGLE, ASPECT, NEAR, FAR);
 	camera.rotation.order = 'YZX';
-	camera.position.set(10, 10, 100); //was 60
+	camera.position.set(10, 10, viewAngle); //was 60
 	camera.lookAt(scene.position);
 	scene.add(camera);
 
