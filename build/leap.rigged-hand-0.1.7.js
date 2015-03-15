@@ -557,6 +557,7 @@ function onReady(handler) {
       return controller.emit('riggedHand.meshAdded', handMesh, leapHand);
     };
     removeMesh = function(leapHand) {
+    	return;
       var handMesh;
       handMesh = leapHand.data('riggedHand.mesh');
       leapHand.data('riggedHand.mesh', null);
