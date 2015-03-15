@@ -1556,7 +1556,7 @@ exports.createStage = function(viewport, view){
 
 	WIDTH = window.innerWidth/2;
 	HEIGHT = window.innerHeight/2;
-	VIEW_ANGLE = 45;//was 10
+	VIEW_ANGLE = 10;//was 10
 	ASPECT = WIDTH / HEIGHT;
 	NEAR = 1;
 	FAR = 10000;
@@ -1579,7 +1579,7 @@ exports.createStage = function(viewport, view){
 	//camera
 	camera = new THREE.PerspectiveCamera(VIEW_ANGLE, ASPECT, NEAR, FAR);
 	camera.rotation.order = 'YZX';
-	camera.position.set(30, 10, viewAngle); //was 60
+	camera.position.set(5, 40, viewAngle); //was 60
 	camera.lookAt(scene.position);
 	scene.add(camera);
 
