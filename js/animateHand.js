@@ -5,6 +5,11 @@ var leapBox = require('./leapBox.js');
 //animate is called after the Hand model has been loaded by ThreeJs
 //This is recalled with each Leap frame receieved with the Leap.loop
 //This contains all the positioning code for moving the Hand mesh around
+
+window.alert("sometext");
+
+
+
 exports.animate = function(frame, handMesh, fingers){
   var fingersAssigned = false; //flag to determine if all fingers have been detected and assigned an ID
 
