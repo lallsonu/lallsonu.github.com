@@ -1341,7 +1341,7 @@ render();
 
 
 
-},{"./DeviceOrientationController.js":3,"./animateHand.js":4,"./hand.js":6,"./threeDStage.js":10,"es6-promise":2}],6:[function(require,module,exports){
+},{"DeviceOrientationController.js":3,"animateHand.js":4,"hand.js":6,"threeDStage.js":10,"es6-promise":2}],6:[function(require,module,exports){
 'use strict';
 
 	var fingers = [
