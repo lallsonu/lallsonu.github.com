@@ -1360,7 +1360,7 @@ exports.createHand = function(){ //set id for fingers once and assign bones
 	var loader = new THREE.JSONLoader();
 
 	//load Hand model with ThreeJS Loader
-	loader.load('rigging.json', function (geometry, materials) {
+	loader.load('js/rigging.json', function (geometry, materials) {
 	  var material;
 
 	  hand = new THREE.SkinnedMesh(
