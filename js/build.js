@@ -1243,8 +1243,7 @@ exports.animate = function(frame, handMesh, fingers){
     //Setting palm position and rotation to position of hand mesh on screen
     var hand = frame.hands[0];
 
-    var position = leapBox.leapToScene( frame , hand.palmPosition );//ensures hand appears within Leap Js interaction box
-    handMesh.position = position; // apply position
+ 
 
     var rotation = {
       z: hand.pitch(),
@@ -1317,11 +1316,7 @@ loadHandRigging.then(function() {
   //stageRight.scene.add(handRigRight.handMesh);
 
 
-  //Init Leap loop, runs the animation of the ThreeD hand from the Leap input
-  Leap.loop(function (frame) {
-    animateHand.animate(frame, handRigLeft.handMesh, handRigLeft.fingers); // pass frame and hand model
-    //animateHand.animate(frame, handRigRight.handMesh, handRigRight.fingers);
-  });
+
 }, function(err) {
   console.log(err); // Error: "It broke"
   console.log("hand rig not loaded in reject");
@@ -1342,11 +1337,7 @@ function render() {
 
 render();
 
-// define connection settings
-var leap = new Leap.Controller({
-  host: '0.0.0.0',
-  port: 6437
-});
+
 
 // connect controller
 leap.connect();
