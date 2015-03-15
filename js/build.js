@@ -1285,14 +1285,12 @@ require('es6-promise').polyfill();
 
 var handLoader = hand.createHand();  //returns loader async object
 var handRigLeft, handRigRight;
-var stageLeft = threeDStage.createStage('.viewport-1', 'left');
 var stageRight = threeDStage.createStage('.viewport-2', 'right');
 var ctrl = orientationController.DeviceOrientationController;
 
 //TODO ES6: Would destructuring help recuce the footprint of this 
 //method call and keep it in 80 chars 
-stageLeft.controls = new ctrl( stageLeft.camera, stageLeft.renderer.domElement );
-stageLeft.controls.connect();
+
 
 stageRight.controls = new ctrl( stageRight.camera, stageRight.renderer.domElement );
 stageRight.controls.connect();
@@ -1310,7 +1308,6 @@ loadHandRigging.then(function() {
   handRigLeft = hand.getHand();
   handRigRight = hand.getHand();
 
-  stageLeft.scene.add(handRigLeft.handMesh);
 
   //Can't add mesh to both right and left hand of screen
   //stageRight.scene.add(handRigRight.handMesh);
@@ -1325,12 +1322,10 @@ loadHandRigging.then(function() {
 
 // Render loop runs stage updating and view to cardboard
 function render() {
-	stageLeft.controls.update();
 	stageRight.controls.update();
 	//TODO ES6: Destructuring and aliasing in the parameters would
 	// clean up the render objects and make them more readable
 	stageRight.renderer.render( stageRight.scene, stageRight.camera );
-  stageLeft.renderer.render( stageLeft.scene, stageLeft.camera );
   
   requestAnimationFrame(render);
 }
@@ -1562,12 +1557,10 @@ exports.createStage = function(viewport, view){
 
 	WIDTH = window.innerWidth/2;
 	HEIGHT = window.innerHeight/2;
-	VIEW_ANGLE = 45;//was 10
+	VIEW_ANGLE = 10;//was 10
 	ASPECT = WIDTH / HEIGHT;
 	NEAR = 1;
 	FAR = 10000;
-
-	var viewAngle = (view === 'left') ? 1 : -1;
 
 	container = document.querySelector(viewport);
 
@@ -1585,7 +1578,7 @@ exports.createStage = function(viewport, view){
 	//camera
 	camera = new THREE.PerspectiveCamera(VIEW_ANGLE, ASPECT, NEAR, FAR);
 	camera.rotation.order = 'YZX';
-	camera.position.set(30, 10, viewAngle); //was 60
+	camera.position.set(10, 10, 10); //was 60
 	camera.lookAt(scene.position);
 	scene.add(camera);
 
